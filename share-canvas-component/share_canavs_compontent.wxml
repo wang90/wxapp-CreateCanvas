@@ -1,0 +1,18 @@
+<view class="canvas-box">
+  <view class="canvas-content">
+    <view class="close-button" bindtap='closeCanvas'>
+      <image src="../../images/canvas-close.png"></image>
+    </view>
+    <view class="canvas-tips">保存这张海报，并发布到朋友圈</view>
+    <view class="canvas">
+      <view class="canvas-image">
+        <image src="{{image}}" mode='widthFix'></image>
+        <canvas canvas-id="shareCanvas"
+        style="width:{{width}}px; height:{{height}}px;"></canvas>
+      </view>
+      <canvas canvas-id="shareCanvas"
+        style="width:{{width}}px; height:{{height}}px;"></canvas>
+    </view>
+    <view class="save-button" bindtap='clickSave'>保存到相册</view>
+  </view>
+</view>
