@@ -26,13 +26,15 @@ data = {
 （2）如果想会知道canvas上需要保存到本地生成一个虚拟的文件再去渲染  
 ```
     const fsm = wx.getFileSystemManager();
+    
     let showImgData = qrcode;
     showImgData = showImgData.replace(/\ +/g, ""); // 去掉空格方法
     showImgData = showImgData.replace(/[\r\n]/g, "");
+    
     const buffer = wx.base64ToArrayBuffer(showImgData);
-    const timestamp = Date.parse(new Date());  // 因为
+    const timestamp = Date.parse(new Date());  
     const fileName = `${wx.env.USER_DATA_PATH}/share_img_${timestamp}.png`;
-    fsm.writeFileSync(fileName, buffer, 'binary');
+    fsm.writeFileSync(fileName, buffer, 'binary'); // 写入文件
 ```
 #### 5.绘制图片到canvas上
 ```
