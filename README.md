@@ -35,8 +35,10 @@ data = {
     const timestamp = Date.parse(new Date());  
     const fileName = `${wx.env.USER_DATA_PATH}/share_img_${timestamp}.png`;
     fsm.writeFileSync(fileName, buffer, 'binary'); // 写入文件
+    
 ```
 #### 5.绘制图片到canvas上
 ```
 ctx.drawImage(fileName, 0, 0, 180, 180);
+
 ```
