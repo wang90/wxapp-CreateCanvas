@@ -21,6 +21,7 @@ data = {
 将生成的二进制的内容直接返回给前端  
 官网：https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.createQRCode.html  
 
+## 前端(小程序内部文件)
 #### 4.拿到的二进制数据需要做一下处理  
 （1）想通过src直接渲染到image展示的话 把src = `data:image/png;base64,${qrcode}`  
 （2）如果想会知道canvas上需要保存到本地生成一个虚拟的文件再去渲染  
