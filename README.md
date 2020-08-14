@@ -5,10 +5,12 @@
 #### 1.从后台查看APPID、APPSECRET  
 #### 2.获取token  
 ```
-get:https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+APPID+"&secret="+APPSECRET
+get: 
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+APPID+"&secret="+APPSECRET
 ```
 
-官网：https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html
+官网： 
+https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html
 
 #### 3.利用获取的生成小程序二维码  
 ```
@@ -19,7 +21,8 @@ data = {
 ```
 
 将生成的二进制的内容直接返回给前端  
-官网：https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.createQRCode.html  
+官网：    
+https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.createQRCode.html  
 
 ### 前端(小程序内部文件)
 #### 4.拿到的二进制数据需要做一下处理  
