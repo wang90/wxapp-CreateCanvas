@@ -5,11 +5,10 @@
 #### 1.从后台查看APPID、APPSECRET  
 #### 2.获取token  
 ```
-get: 
-https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+APPID+"&secret="+APPSECRET
+get:https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+APPID+"&secret="+APPSECRET
 ```
 
-官网： 
+官网：    
 https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html
 
 #### 3.利用获取的生成小程序二维码  
@@ -21,7 +20,7 @@ data = {
 ```
 
 将生成的二进制的内容直接返回给前端  
-官网：    
+官网：         
 https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.createQRCode.html  
 
 ### 前端(小程序内部文件)
@@ -39,10 +38,8 @@ https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wx
     const timestamp = Date.parse(new Date());  
     const fileName = `${wx.env.USER_DATA_PATH}/share_img_${timestamp}.png`;
     fsm.writeFileSync(fileName, buffer, 'binary'); // 写入文件
-    
 ```
 #### 5.绘制图片到canvas上
 ```
 ctx.drawImage(fileName, 0, 0, 180, 180);
-
 ```
