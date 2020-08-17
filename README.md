@@ -5,6 +5,8 @@
 #### 1.从后台查看APPID、APPSECRET  
 #### 2.获取token  
 ```
+// APPID
+// APPSECRET
 get:https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+APPID+"&secret="+APPSECRET
 ```
 
